@@ -149,17 +149,7 @@ function draw() {
   blocks8.score();
   blocks9.score();
 }
-function mouseDragged(){
-  Matter.Body.setPosition(this.polygon,{x:mouseX,y:mouseY});
-}
-function mouseReleased(){
-  slingShot.fly();
-}
-function keyPressed(){
-  if(keyCode === 32){
-      slingShot.attach(this.polygon);
-  }
-}
+
 async function getBackgroundImage(){
    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
    var responseJSON = await response.json();
